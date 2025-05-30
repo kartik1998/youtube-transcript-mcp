@@ -29,7 +29,7 @@ public class YoutubeTranscriberService {
       String transcription = ytB2.fetchTranscript(youtubeVideoUrl);
       return Map.of("status", "success", "video_transcription", transcription);
     } catch (Exception e) {
-      logger.error("Failed to get youtube video transcription");
+      logger.error("Failed to get youtube video transcription, error={}", e.getMessage());
       return Map.of("status", "failure", "error", e.getMessage());
     }
   }
