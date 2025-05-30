@@ -1,6 +1,6 @@
 package com.github.kartik1998.config;
 
-import com.github.kartik1998.service.AccountService;
+import com.github.kartik1998.service.YoutubeTranscriberService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
@@ -14,7 +14,7 @@ public class BeanConfig {
   }
 
   @Bean
-  public AccountService accountService() {
-    return new AccountService();
+  public YoutubeTranscriberService accountService() {
+    return new YoutubeTranscriberService();
   }
 }

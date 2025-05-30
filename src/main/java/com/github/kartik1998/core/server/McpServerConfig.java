@@ -1,10 +1,10 @@
 package com.github.kartik1998.core.server;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.kartik1998.core.annotations.McpClass;
 import com.github.kartik1998.core.annotations.McpParam;
 import com.github.kartik1998.core.annotations.McpTool;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import io.modelcontextprotocol.server.McpServer;
 import io.modelcontextprotocol.server.McpServerFeatures.SyncToolSpecification;
 import io.modelcontextprotocol.server.McpSyncServer;
@@ -43,7 +43,7 @@ public class McpServerConfig {
       throws ClassNotFoundException, JsonProcessingException {
     McpSyncServer server =
         McpServer.sync(transportProvider)
-            .serverInfo("mcp-example-server", "1.0.0")
+            .serverInfo("youtube-transcript-mcp", "1.0.0")
             .capabilities(
                 McpSchema.ServerCapabilities.builder()
                     .resources(false, true) // Enable resource support
